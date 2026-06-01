@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: colab-pe/colab-website
+  branch: main
+
+media_folder: "images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
